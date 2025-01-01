@@ -1,5 +1,5 @@
 ╔═══════════════════════════════════════════════════════════════╗
-╠                              PIE                              ╣
+║                              PIE                              ║
 ╚═══════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -20,7 +20,7 @@
 
 ╔═══════════════════════════════════════════════════════════════╗
 ║         Assuming you are on Linux, these commands should      ║
-║                      do the trick:                           ║
+║                      do the trick:                            ║
 ║                                                               ║
 ║           > git clone https://github.com/athenahax/pie        ║
 ║                          > cd pie                             ║
@@ -59,10 +59,14 @@
 ║                 for the Linux kernel.                         ║
 ╚═══════════════════════════════════════════════════════════════╝
 
+
 ╔═══════════════════════════════════════════════════════════════╗
-╠                           REFERENCE                           ╣
+║                           REFERENCE                           ║
 ╚═══════════════════════════════════════════════════════════════╝
-                        
-https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula
-https://github.com/athenahax/pie/blob/main/pi.h
-https://github.com/athenahax/pie/blob/main/asm_parser.h
+                                                                 
+╔═══════════════════════════════════════════════════════════════╗
+║      https://www.davidhbailey.com/dhbpapers/bbp-alg.pdf       ║
+║             https://en.wikipedia.org/wiki/Pi                  ║
+║       https://github.com/athenahax/pie/blob/main/pi.h         ║
+║    https://github.com/athenahax/pie/blob/main/asm_parser.h    ║
+╚═══════════════════════════════════════════════════════════════╝
