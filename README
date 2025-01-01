@@ -3,8 +3,8 @@
 ╚═══════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
-║             Pie encodes raw bytes using their respective      ║
-║               locations in pi (π) to evade scantime AV        ║
+║          Pie encodes raw bytes using their respective         ║
+║            locations in pi (π) to evade scantime AV           ║
 ║                        detection.                             ║
 ║                                                               ║
 ║   This is possible due to the 'Bailey–Borwein–Plouffe         ║
