@@ -1,0 +1,67 @@
+╔═══════════════════════════════════════════════════════════════╗
+╠                              PIE                              ╣
+╚═══════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║             Pie encodes bytes using their respective          ║
+║             locations in pi (π) to evade scantime AV          ║
+║                        detection.                             ║
+║                                                               ║
+║   This is possible due to the 'Bailey–Borwein–Plouffe         ║
+║     formula', which allows us to retrieve digits of pi        ║
+║       without actually storing the entirety of pi within      ║
+║                       our program.                            ║
+╚═══════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                             SETUP                             ║
+╚═══════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║         Assuming you are on Linux, these commands should      ║
+║                      do the trick:                           ║
+║                                                               ║
+║           > git clone https://github.com/athenahax/pie        ║
+║                          > cd pie                             ║
+║                                                               ║
+║       Inside of the root project directory, you should        ║
+║   modify 'evil.asm' to include your assembly instructions     ║
+║      that you'd like to be executed in memory. Once           ║
+║       you've done that, you can go ahead and build the        ║
+║                project using the following command:           ║
+║                                                               ║
+║                      > sh build.sh                            ║
+║                                                               ║
+║      Inside of the newly created /release/ directory,         ║
+║      your binaries should have been compiled as well          ║
+║       as stub.c and evil.asm being copied over                ║
+║                  alongside them.                              ║
+║                                                               ║
+║         To retrieve your pi-encoded bytes, run this command:  ║
+║                                                               ║
+║                       > ./enc evil.asm                        ║
+║                                                               ║
+║    Copy down the array after 'LOCATIONS:', you will use this  ║
+║              to compile the stub                              ║
+║                                                               ║
+║                  Run this command to build the stub:          ║
+║                                                               ║
+║             ./compile "145, 117, 97, 85, 86, 86"              ║
+║                                                               ║
+║  Obviously, you'll be replacing that array with the one you   ║
+║             copied down from the enc binary.                  ║
+║                                                               ║
+║                   Your stub has now been built!               ║
+║                                                               ║
+║   NOTE: The stub will ONLY work on Linux, as the memory       ║
+║ paging alignment in the stub(.c) is configured specifically   ║
+║                 for the Linux kernel.                         ║
+╚═══════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+╠                           REFERENCE                           ╣
+╚═══════════════════════════════════════════════════════════════╝
+                        
+https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula
+https://github.com/athenahax/pie/blob/main/pi.h
+https://github.com/athenahax/pie/blob/main/asm_parser.h
